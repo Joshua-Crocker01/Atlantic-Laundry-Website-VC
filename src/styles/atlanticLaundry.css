@@ -1,0 +1,56 @@
+:root {
+    --primary: HSL(216, 56%, 22%);
+    --navy1: #345678;
+    --navy2: #56789A;
+    --gray-light: #E5E5E5;
+    --gray-medium: #B3B3B3;
+    --gray-dark: #7F7F7F;
+    --teal: #145555;
+    --soft-blue: #ADD8E6;
+    --pale-blue: #E0F7FA;
+    --off-white: #F8F8F8;
+    --border-gray: #D3D3D3;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Nav Bar */
+.navbar{
+    background-color: var(--off-white);
+    border-bottom:solid 0.5px var(--border-gray);
+    box-shadow: 0 2px 5px var(--shadow);
+    margin-bottom:0.5em;
+}
+
+.navbar .navbar-nav{
+    margin-right: 2em;
+}
+
+.navbar .nav-link{
+    font-size: 22px;
+    font-family:'Gill Sans';
+    color: black;
+    margin: 0 0.5em;
+}
+
+.navbar .nav-link:hover{
+    color: var(--navy2);
+}
+
+.navbar .nav-current-page{
+    color: var(--navy1);
+}
+
+.navbar-brand img{
+    margin-left: 2em;
+    max-width: 400px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
