@@ -1,10 +1,14 @@
 import React from "react";
+import ProductCard from './../components/ProductCard';
+
+
  
 const Products = () => {
     return (
-        <div>
-            <h1>Welcome to Products page</h1>
-        </div>
+        <>
+            <ProductCard />
+            <ProductCard/>
+        </>
     );
 };
  

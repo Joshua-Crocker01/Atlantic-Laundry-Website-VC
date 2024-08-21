@@ -26,7 +26,7 @@
 }
 
 .navbar .nav-link{
-    font-size: 22px;
+    font-size: 18px;
     font-family:'Gill Sans';
     color: black;
     margin: 0 0.5em;
@@ -54,3 +54,15 @@
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
+
+/* Drop down items */
+.dropdown-item{
+    font-size: 17px;
+    font-family:'Gill Sans';
+    color: black;
+    margin: 0 0.5em;
+}
+
+.dropdown-item:hover{
+    color: var(--navy2);
+}
