@@ -8,7 +8,7 @@ const NavBar = () => {
 	const pageLocation = useLocation();
 
     return (
-		<Navbar expand="lg">
+		<Navbar expand="lg" sticky="top">
 			<Navbar.Brand>
 				<img 
 				src={Logo}

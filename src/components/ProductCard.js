@@ -1,29 +1,54 @@
-// {productName, productDesc, imageLink, specSheet, pricing}
-const ProductCard = ({productName, productLoad, productDesc, imageLink, specSheet, pricing}) => {
-    return (
-      <div class="container mt-5 mb-5">
-        <div class="d-flex justify-content-center row">
-          <div class="col-med-10">
-            <div class="row p-2 bg-white border rounded">
-            <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src={imageLink}/></div>
-                <div class="col-md-6 mt-1">
-                    <h5>{productName}</h5>
-                    <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br/></span></div>
-                    <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br/></span></div>
-                    <p class="text-justify text-truncate para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                </div>
-                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                    <div class="d-flex flex-row align-items-center">
-                        <h4 class="mr-1">$13.99</h4><span class="strike-text">$20.99</span>
-                    </div>
-                    <h6 class="text-success">Free shipping</h6>
-                    <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
+import React from 'react';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+
+const ProductCard = ({ productName, productLoad, productDesc, imageLink, specSheet }) => {
+  const pricingLink = "https://docs.google.com/spreadsheets/d/1Duz-rL7YMRPM5_UBPy4y2G8YduRxBsdUalcZBxoeHqM/edit?usp=sharing";
   
-  export default ProductCard;
+  const followLink = (link) => {
+    window.open(link, "_blank");
+  };
+
+  return (
+    <Container className="mt-5 mb-5">
+      <Row className="justify-content-center">
+        <Col md={10}>
+          <Card className="p-2 bg-white border rounded product-card">
+            <Row>
+              <Col md={3} className="mt-1">
+                <Card.Img 
+                  src={imageLink} 
+                  className="img-fluid img-responsive rounded product-image" 
+                  alt={productName}
+                />
+              </Col>
+              <Col md={9} className="mt-1">
+                <Card.Body>
+                  <Card.Title>{productName}</Card.Title>
+                  <div className='spacer' />
+                  <Card.Subtitle className="mt-1 mb-1 text-muted">{productLoad}</Card.Subtitle>
+                  <div className='spacer' />
+                  <Card.Text className="text-justify mb-0">{productDesc}</Card.Text>
+                  <div className='spacer' />
+                  <Row className='justify-content-center mt-3'>
+                    <Col xs={12} sm={6} className="d-flex justify-content-center">
+                      <button onClick={() => followLink(specSheet)}>
+                        Product Specs
+                      </button>
+                    </Col>
+                    <Col xs={12} sm={6} className="d-flex justify-content-center">
+                      <button onClick={() => followLink(pricingLink)}>
+                        View Price List
+                      </button>
+                    </Col>
+                  </Row>
+                </Card.Body>
+              </Col>
+            </Row>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+export default ProductCard;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../../components/ProductCard";
+import ImageHeader from "../../components/ImageHeader";
 
 const Washers = () => {
     const [csvData, setCsvData] = useState([]);
@@ -57,12 +58,16 @@ const Washers = () => {
 
     return (
         <>
-            <h1>Washers Page</h1>
+            <ImageHeader title="washers" />
+
             {csvData.map((product, index) => (
                 <ProductCard 
                     key={index} 
                     productName={product.name}
                     imageLink={product.ImageLink}
+                    productLoad={product.load}
+                    productDesc={product.description}
+                    specSheet={product.specSheet}
                 />
             ))}
         </>

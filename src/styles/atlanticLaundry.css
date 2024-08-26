@@ -1,5 +1,7 @@
 :root {
-    --primary: HSL(216, 56%, 22%);
+    --primary: hsl(216, 56%, 22%);
+    --hover: hsl(216, 56%, 32%);
+    --footer: #2e2e2e;
     --navy1: #345678;
     --navy2: #56789A;
     --gray-light: #E5E5E5;
@@ -13,12 +15,15 @@
     --shadow: rgba(0, 0, 0, 0.1);
 }
 
+.spacer {
+    height:20px;
+}
+
 /* Nav Bar */
 .navbar{
     background-color: var(--off-white);
     border-bottom:solid 0.5px var(--border-gray);
     box-shadow: 0 2px 5px var(--shadow);
-    margin-bottom:0.5em;
 }
 
 .navbar .navbar-nav{
@@ -26,8 +31,8 @@
 }
 
 .navbar .nav-link{
-    font-size: 18px;
-    font-family:'Gill Sans';
+    font-size: 20px;
+    font-family:'Josefin Sans' sans-serif;
     color: black;
     margin: 0 0.5em;
 }
@@ -57,12 +62,126 @@
 
 /* Drop down items */
 .dropdown-item{
-    font-size: 17px;
-    font-family:'Gill Sans';
+    font-size: 19px;
+    font-family:'Josefin Sans' sans-serif;
     color: black;
     margin: 0 0.5em;
 }
 
 .dropdown-item:hover{
-    color: var(--navy2);
+    color: var(--hover);
+}
+
+.card-title{
+    font-size: 2em;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.card-text{
+    font-size: 1.4em;
+}
+
+.card-subtitle{
+    font-size: 1.4em;
+    font-style: italic;
+}
+
+.product-card button, form button{
+    background-color: var(--primary);
+    border:none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem; 
+    padding: 18px 44px; 
+    text-align: center;
+    display: inline-block;
+    margin: 10px; 
+    cursor: pointer;
+    letter-spacing: 1.5px;
+}
+
+.product-card button:hover, form button:hover{
+    background-color: hsl(216, 56%, 32%); 
+    transition: background-color 0.3s ease;
+}
+
+.card{
+    font-family: "Work Sans" sans-serif;
+}
+
+.header-container{
+    position: relative;
+    height: 420px;
+    background-size:cover;  
+    background-position: center bottom;
+    background-attachment: fixed; 
+    overflow: hidden; 
+    color: white;
+}
+
+.header-title, .header-subtitle{
+    font-family:"Josefin Sans";
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-title{
+    font-size: 42px;
+}
+
+.text-content, .form-label{
+    font-family: "Work Sans";
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    font-weight: 300;
+}
+
+.text-header{
+    margin-bottom: 0.5em;
+    font-family: "Josefin Sans";
+    color: #1a1a1a;
+    letter-spacing: 1px;
+}
+
+footer{
+    background: var(--footer);
+    color: white;
+    padding: 70px 0;
+    margin-top: 20px;
+}
+
+.no-select{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+}
+
+.accordion-button{
+    outline: none;
+    border: none;
+}
+
+.accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.accordion-item{
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.accordion-item:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: white;
 }
